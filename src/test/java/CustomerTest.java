@@ -36,9 +36,9 @@ public class CustomerTest {
         assertEquals(1, customer.countCarCollection());
     }
     @Test
-    public void canBuyCar(Customer customer, Car electricCar){
-
-        assertEquals(true, customer.canBuyCar(electricCar));
-
+    public void canBuyCar(){
+        customer.canBuyCar(electricCar);
+        assertEquals(20000, customer.getMoney(), 0.01);
+        assertEquals(1, customer.countCarCollection());
     }
 }

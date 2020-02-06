@@ -21,26 +21,24 @@ public class Customer {
         return money;
     }
 
-    public int countCarCollection(){
+    public int countCarCollection() {
         return collection.size();
 
     }
 
-    public void addCarToCollection(Car car){
+    public void addCarToCollection(Car car) {
         collection.add(car);
     }
-//    public double canBuyCar(Car car){
+
+    //    public double canBuyCar(Car car){
 //        double this.getMoney() - car.getPrice();
 //    }
-     public boolean canBuyCar(Car car){
-         boolean sufficientFunds = false;
-        if(this.money > car.getPrice()) {
-            return true;
-        } else {
-            return false;
+    public void canBuyCar(Car car) {
+        if (this.money > car.getPrice()) {
+            addCarToCollection(car);
+            money -= car.getPrice();
         }
-         return boolean suffientFunds;
-     }
 
 
+    }
 }
