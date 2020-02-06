@@ -32,8 +32,15 @@ public class Customer {
 //    public double canBuyCar(Car car){
 //        double this.getMoney() - car.getPrice();
 //    }
-//    public double removeMoneyFromWallet(){
-//        return money -
-//    }
+     public boolean canBuyCar(Car car){
+         boolean sufficientFunds = false;
+        if(this.money > car.getPrice()) {
+            return true;
+        } else {
+            return false;
+        }
+         return boolean suffientFunds;
+     }
+
 
 }
